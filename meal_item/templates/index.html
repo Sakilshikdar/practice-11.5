@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-center my-5">this is index file</h1>
+
+<h1>{{data.length}}</h1>
+
+<div class="d-flex flex-wrap justify-content-center gap-5 w-50 mx-auto">
+  {% for meal in data %}
+  <div class="col-3">
+    <div class="card m-2">
+      <img src="{{meal.strMealThumb}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{meal.strMeal}}</h5>
+        <p class="card-text">
+          This is meal item description and we provide all the details of the
+          meal item here.
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
